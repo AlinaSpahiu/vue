@@ -1,16 +1,21 @@
 <template>
   <div class="container">
     <h1> Students</h1>
-      <div class="row d=flex align-items-center" v-for="person in persons" :key="person.id">
-          <div class="col">
+   
+      <div class="row d-flex align-items-center" v-for="person in persons" :key="person.id" >
+
+         <div  v-if="person.age<='34 years old' " class=" d-flex align-items-center">
+          <div class="col-sm-6">
                <h3> {{person.name}} </h3>
                <h5> {{person.about}} </h5>
                <h6> {{person.age}} </h6>
           </div>
 
-          <div class="col-sm-4 mt-3">
+          <div class="col-sm-6 mt-3">
               <img class="img-fluid" v-bind:src="person.image" v-bind:alt="person.name">
-          </div>
+        </div>
+      </div>
+
       </div>
   </div>
 </template>
@@ -57,5 +62,8 @@ export default {
 
 
 <style scoped>
-
+img{
+  height: 300px;
+  width: 300px;
+}
 </style>
