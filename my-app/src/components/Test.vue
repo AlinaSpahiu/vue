@@ -1,8 +1,9 @@
 <template>
   <div class="container">
     <h1> Students</h1>
-   
+    
       <div class="row d-flex align-items-center" v-for="person in persons" :key="person.id" >
+           
 
          <div  v-if="person.age<='34 years old' " class=" d-flex align-items-center">
           <div class="col-sm-6">
@@ -33,7 +34,7 @@ export default {
       about: "Full stack Developer more focused in MERN and MEVN stacks",
       image:
         "https://media-exp1.licdn.com/dms/image/C4D03AQG3KDiMRNm3Rw/profile-displayphoto-shrink_800_800/0/1601975574996?e=1611792000&v=beta&t=5a8cM4fmp7G7Y7P4HCINfdk01B_XigTLkfP6ueTMl1g",
-      age: "27 years old",
+      age: 27+" years old",
     },
     {
       id: 2,
