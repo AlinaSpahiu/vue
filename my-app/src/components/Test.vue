@@ -2,17 +2,17 @@
   <div class="container">
     <h1> Students</h1>
     
-      <div class="row d-flex align-items-center" v-for="person in persons" :key="person.id" >
+      <div class="row d-flex align-items-center justify-content-center" v-for="person in persons" :key="person.id" >
            
 
-         <div  v-if="person.age<='34 years old' " class=" d-flex align-items-center">
-          <div class="col-sm-6">
+         <div  v-if="person.age<='34 years old' " class=" d-flex align-items-center d-flex justify-content-right">
+          <div class="col">
                <h3> {{person.name}} </h3>
                <h5> {{person.about}} </h5>
                <h6> {{person.age}} </h6>
           </div>
 
-          <div class="col-sm-6 mt-3">
+          <div class="col mt-3">
               <img class="img-fluid" v-bind:src="person.image" v-bind:alt="person.name">
         </div>
       </div>
